@@ -22,3 +22,6 @@ HelloWorld/make/bin/
 HelloWorld/make/lib/
 HelloWorld/make/makefile_x64Linux2.6gcc
 HelloWorld/make/output/
+HelloWorld/src/bin/
+HelloWorld/src/lib/
+HelloWorld/src/output/
