@@ -10,8 +10,10 @@ using namespace std;
 
 class listener:public eprosima::fastrtps::SubscriberListener{
 public:
-	listener(){}
+	listener():nCount_(0){}
 	~listener(){}
+
+	int nCount_;
 
 	void onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info);
 	void onNewDataMessage(eprosima::fastrtps::Subscriber* sub);
@@ -39,6 +41,11 @@ int main(int argc, char** argv)
 	eprosima::fastrtps::Subscriber* pSubscriber
 		= eprosima::fastrtps::Domain::createSubscriber(pParticipant,RParam);
 	assert(pSubscriber!=NULL);
+
+	listener ls;
+
+	while(ls.nCount_==0) {
+	}
 
 	bool b;
 	b = eprosima::fastrtps::Domain::removeSubscriber(pSubscriber);
