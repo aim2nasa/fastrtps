@@ -4,6 +4,8 @@
 #include <fastrtps/attributes/ParticipantAttributes.h>
 #include <fastrtps/attributes/SubscriberAttributes.h>
 #include <fastrtps/subscriber/SubscriberListener.h>
+#include <fastrtps/subscriber/SampleInfo.h>
+#include <fastrtps/subscriber/Subscriber.h>
 #include "gen/HelloWorldPubSubTypes.h"
 
 using namespace std;
@@ -14,6 +16,7 @@ public:
 	~listener(){}
 
 	int nCount_;
+	eprosima::fastrtps::SampleInfo_t info_;
 
 	void onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info);
 	void onNewDataMessage(eprosima::fastrtps::Subscriber* sub);
@@ -32,7 +35,14 @@ void listener::onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosi
 
 void listener::onNewDataMessage(eprosima::fastrtps::Subscriber* sub)
 {
-	std::cout<<"onNewDataMessage"<<std::endl;
+	HelloWorld st;
+	if(sub->takeNextData(&st,&info_))
+	{
+		if(info_.sampleKind == eprosima::fastrtps::rtps::ALIVE)
+		{
+			std::cout<<"Message="<<st.msg()<<std::endl;
+		}
+	}
 }
 
 int main(int argc, char** argv)
