@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -fPIC -g -O2 -Wall -Wextra -std=c++11
 
-LIBNAME = libHelloworld
+LIBNAME = libHelloWorld
 TARGET = $(LIBNAME).so.1
 SRCS = HelloWorld.cxx HelloWorldPubSubTypes.cxx
 OBJS = ${SRCS:.cxx=.o}
