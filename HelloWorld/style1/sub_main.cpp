@@ -38,11 +38,10 @@ int main(int argc, char** argv)
 	eprosima::fastrtps::SubscriberAttributes RParam;
 	RParam.topic.topicDataType = "HelloWorld";
 
-	eprosima::fastrtps::Subscriber* pSubscriber
-		= eprosima::fastrtps::Domain::createSubscriber(pParticipant,RParam);
-	assert(pSubscriber!=NULL);
-
 	listener ls;
+	eprosima::fastrtps::Subscriber* pSubscriber
+		= eprosima::fastrtps::Domain::createSubscriber(pParticipant,RParam,(eprosima::fastrtps::SubscriberListener*)&ls);
+	assert(pSubscriber!=NULL);
 
 	while(ls.nCount_==0) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(500));
