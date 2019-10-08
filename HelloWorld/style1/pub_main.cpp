@@ -24,11 +24,13 @@ int main(int argc, char** argv)
 		= eprosima::fastrtps::Domain::createPublisher(pParticipant,WParam);
 	assert(pPublisher!=NULL);
 
+	bool b;
+
 	HelloWorld hello;
 	hello.msg("HelloWorld");
-	pPublisher->write((void*)&hello);
+	b = pPublisher->write((void*)&hello);
+	assert(b==true);
 
-	bool b;
 	b = eprosima::fastrtps::Domain::removePublisher(pPublisher);
 	assert(b==true);
 	b = eprosima::fastrtps::Domain::removeParticipant(pParticipant);
