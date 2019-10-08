@@ -3,6 +3,7 @@
 #include <fastrtps/Domain.h>
 #include <fastrtps/attributes/ParticipantAttributes.h>
 #include <fastrtps/attributes/PublisherAttributes.h>
+#include <fastrtps/publisher/Publisher.h>
 #include "gen/HelloWorldPubSubTypes.h"
 
 using namespace std;
@@ -22,6 +23,10 @@ int main(int argc, char** argv)
 	eprosima::fastrtps::Publisher* pPublisher 
 		= eprosima::fastrtps::Domain::createPublisher(pParticipant,WParam);
 	assert(pPublisher!=NULL);
+
+	HelloWorld hello;
+	hello.msg("HelloWorld");
+	pPublisher->write((void*)&hello);
 
 	bool b;
 	b = eprosima::fastrtps::Domain::removePublisher(pPublisher);
