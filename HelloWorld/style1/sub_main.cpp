@@ -20,6 +20,14 @@ public:
 };
 void listener::onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info)
 {
+	if(info.status==eprosima::fastrtps::rtps::MATCHED_MATCHING)
+	{
+		std::cout<<"Subscriber matched"<<std::endl;
+	}
+	else
+	{
+		std::cout<<"Subscriber unmatched"<<std::endl;
+	}
 }
 
 void listener::onNewDataMessage(eprosima::fastrtps::Subscriber* sub)
