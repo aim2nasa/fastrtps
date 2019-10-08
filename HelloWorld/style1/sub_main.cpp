@@ -45,6 +45,7 @@ int main(int argc, char** argv)
 	listener ls;
 
 	while(ls.nCount_==0) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	}
 
 	bool b;
