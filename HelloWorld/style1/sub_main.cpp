@@ -3,9 +3,26 @@
 #include <fastrtps/Domain.h>
 #include <fastrtps/attributes/ParticipantAttributes.h>
 #include <fastrtps/attributes/SubscriberAttributes.h>
+#include <fastrtps/subscriber/SubscriberListener.h>
 #include "gen/HelloWorldPubSubTypes.h"
 
 using namespace std;
+
+class listener:public eprosima::fastrtps::SubscriberListener{
+public:
+	listener(){}
+	~listener(){}
+
+	void onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info);
+	void onNewDataMessage(eprosima::fastrtps::Subscriber* sub);
+};
+void listener::onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info)
+{
+}
+
+void listener::onNewDataMessage(eprosima::fastrtps::Subscriber* sub)
+{
+}
 
 int main(int argc, char** argv)
 {
