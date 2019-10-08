@@ -12,7 +12,6 @@ all : pre-build main-build
 
 pre-build:
 	@echo PRE
-	@fastrtpsgen $(IDL) -d gen
 	@cd gen;make
 
 main-build: $(TARGET_PUB)
@@ -25,8 +24,10 @@ $(TARGET_PUB) : $(OBJS_PUB)
 	@echo $@:$^...
 	$(CXX) -c $< $(INCLUDES) $(CXXFLAGS)
 
-
 clean:
 	@echo $@...
 	@cd gen;make clean
 	rm -rf *.o $(TARGET_PUB)
+
+idl:
+	fastrtpsgen $(IDL) -d gen
