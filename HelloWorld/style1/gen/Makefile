@@ -14,6 +14,7 @@ $(TARGET) : $(OBJS)
 	$(CXX) -shared -Wl,-soname,$@ -o $@ $(OBJS) $(LIBS)
 	@echo $*
 	ln -s $@ $(LIBNAME).so
+	@mv $(LIBNAME).* ..
 
 %.o: %.cxx
 	@echo $@:$^...

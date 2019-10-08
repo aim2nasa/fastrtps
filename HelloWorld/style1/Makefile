@@ -6,7 +6,7 @@ TARGET_PUB = pub
 SRCS_PUB = pub_main.cpp
 OBJS_PUB = ${SRCS_PUB:.cpp=.o}
 
-LIBS = -lfastrtps
+LIBS = -lfastrtps -L$(shell pwd) -lHelloWorld
 
 all : pre-build main-build
 
@@ -27,7 +27,7 @@ $(TARGET_PUB) : $(OBJS_PUB)
 clean:
 	@echo $@...
 	@cd gen;make clean
-	rm -rf *.o $(TARGET_PUB)
+	rm -rf *.o $(TARGET_PUB) *.so*
 
 idl:
 	fastrtpsgen $(IDL) -d gen
