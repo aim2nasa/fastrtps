@@ -31,7 +31,10 @@ int main(int argc, char** argv)
 	for(int i=0;i<10;i++)
 	{
 		b = pPublisher->write((void*)&hello);
-		if(b) std::cout<<".";
+		if(b) {
+			std::cout<<".";
+			std::fflush(stdout);
+		}
 		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	}
 
