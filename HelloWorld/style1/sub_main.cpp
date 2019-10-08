@@ -32,6 +32,7 @@ void listener::onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosi
 
 void listener::onNewDataMessage(eprosima::fastrtps::Subscriber* sub)
 {
+	std::cout<<"onNewDataMessage"<<std::endl;
 }
 
 int main(int argc, char** argv)

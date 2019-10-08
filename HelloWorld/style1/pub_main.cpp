@@ -28,8 +28,12 @@ int main(int argc, char** argv)
 
 	HelloWorld hello;
 	hello.msg("HelloWorld");
-	b = pPublisher->write((void*)&hello);
-	assert(b==true);
+	for(int i=0;i<10;i++)
+	{
+		b = pPublisher->write((void*)&hello);
+		if(b) std::cout<<".";
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+	}
 
 	b = eprosima::fastrtps::Domain::removePublisher(pPublisher);
 	assert(b==true);
