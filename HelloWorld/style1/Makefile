@@ -8,7 +8,7 @@ OBJS_PUB = ${SRCS_PUB:.cpp=.o}
 
 TARGET_SUB = sub
 SRCS_SUB = sub_main.cpp
-OBJS_SUB = ${SRCS_PUB:.cpp=.o}
+OBJS_SUB = ${SRCS_SUB:.cpp=.o}
 
 LIBS = -lfastrtps -L$(shell pwd) -lHelloWorld
 
