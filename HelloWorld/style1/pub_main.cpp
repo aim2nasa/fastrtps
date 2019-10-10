@@ -10,6 +10,9 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
+	(void)argc;
+	(void)argv;
+
 	eprosima::fastrtps::ParticipantAttributes PParam;
 	eprosima::fastrtps::Participant* pParticipant = eprosima::fastrtps::Domain::createParticipant(PParam);
 	assert(pParticipant!=NULL);

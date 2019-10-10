@@ -23,6 +23,8 @@ public:
 };
 void listener::onSubscriptionMatched(eprosima::fastrtps::Subscriber* sub, eprosima::fastrtps::rtps::MatchingInfo& info)
 {
+	(void)sub;
+
 	if(info.status==eprosima::fastrtps::rtps::MATCHED_MATCHING)
 	{
 		std::cout<<"Subscriber matched"<<std::endl;
@@ -47,6 +49,9 @@ void listener::onNewDataMessage(eprosima::fastrtps::Subscriber* sub)
 
 int main(int argc, char** argv)
 {
+	(void)argc;
+	(void)argv;
+
 	eprosima::fastrtps::ParticipantAttributes PParam;
 	eprosima::fastrtps::Participant* pParticipant = eprosima::fastrtps::Domain::createParticipant(PParam);
 	assert(pParticipant!=NULL);
