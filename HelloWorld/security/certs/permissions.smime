@@ -1,16 +1,16 @@
 MIME-Version: 1.0
-Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----9D8E6458A09B944722312781998FFAB0"
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----4A38BF36FF4A7001328244A55E2C1699"
 
 This is an S/MIME signed message
 
-------9D8E6458A09B944722312781998FFAB0
+------4A38BF36FF4A7001328244A55E2C1699
 Content-Type: text/plain
 
 <?xml version="1.0" encoding="utf-8"?>
 <dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.omg.org/spec/DDS-Security/20170801/omg_shared_ca_permissions.xsd">
     <permissions>
         <grant name="PublisherPermissions">
-            <subject_name>emailAddress=sc.kwak@unionplace.co.kr, CN=publisher, OU=unionplace, O=unionplace, ST=SEOUL, C=KR</subject_name>
+            <subject_name>emailAddress=sc.kwak@unionplace.co.kr, CN=publisher, O=unionplace, ST=SEOUL, C=KR</subject_name>
             <validity>
                 <not_before>2013-06-01T13:00:00</not_before>
                 <not_after>2038-06-01T13:00:00</not_after>
@@ -31,7 +31,7 @@ Content-Type: text/plain
             <default>DENY</default>
         </grant>
         <grant name="SubscriberPermissions">
-            <subject_name> emailAddress=sc.kwak@unionplace.co.kr, CN=subscriber, OU=unionplace, O=unionplace, ST=SEOUL, C=KR</subject_name>
+            <subject_name> emailAddress=sc.kwak@unionplace.co.kr, CN=subscriber, O=unionplace, ST=SEOUL, C=KR</subject_name>
             <validity>
                 <not_before>2013-06-01T13:00:00</not_before>
                 <not_after>2038-06-01T13:00:00</not_after>
@@ -54,7 +54,7 @@ Content-Type: text/plain
     </permissions>
 </dds>
 
-------9D8E6458A09B944722312781998FFAB0
+------4A38BF36FF4A7001328244A55E2C1699
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="smime.p7s"
@@ -76,12 +76,12 @@ DAVTRU9VTDENMAsGA1UEBwwER1VSTzETMBEGA1UECgwKdW5pb25wbGFjZTEgMB4G
 A1UEAwwXdW5pb25wbGFjZSBNYWluIFRlc3QgQ0ExJzAlBgkqhkiG9w0BCQEWGHNj
 Lmt3YWtAdW5pb25wbGFjZS5jby5rcgIJAIVfFbVgJLOqMA0GCWCGSAFlAwQCAQUA
 oIHkMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE5
-MTAxNTExMjY1N1owLwYJKoZIhvcNAQkEMSIEII6mokG5IekV+XrA4adrjCEXa+4M
-aoIfOPOGYn8Fy4mzMHkGCSqGSIb3DQEJDzFsMGowCwYJYIZIAWUDBAEqMAsGCWCG
+MTAxNTExNTIwM1owLwYJKoZIhvcNAQkEMSIEINwJUHaRHJhMusXjxwcC4ngKXnJ+
+1in3sj+BFqoJwHzcMHkGCSqGSIb3DQEJDzFsMGowCwYJYIZIAWUDBAEqMAsGCWCG
 SAFlAwQBFjALBglghkgBZQMEAQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCA
 MA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIHMA0GCCqGSIb3DQMCAgEoMAoGCCqGSM49
-BAMCBEcwRQIhAJGXE397lO6ZwuER8pMxBrQ2uDjRn59r+ykmEkg2CaxhAiAbJmHn
-6CKMaD6W/ivN7nfbOGB9NipGXNyOi0GWHCtfxQ==
+BAMCBEcwRQIhANPiGrLMzLXIzbDHe8TtjvU6+owPonMy/rYGVhVJ151yAiAkfn38
+745s/z2wImRI2dzN3G9fxoN9k3tEEED8Ulh/HA==
 
-------9D8E6458A09B944722312781998FFAB0--
+------4A38BF36FF4A7001328244A55E2C1699--
 
