@@ -64,6 +64,12 @@ int main(int argc, char** argv)
 	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.identity_ca","file://../certs/mainCaCert.pem");
 	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.identity_certificate","file://../certs/subCert.pem");
 	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.private_key","file://../certs/subKey.pem");
+	participant_property_policy.properties().emplace_back(eprosima::fastrtps::rtps::Property("dds.sec.access.plugin","builtin.Access-Permissions"));
+	participant_property_policy.properties().emplace_back(eprosima::fastrtps::rtps::Property("dds.sec.access.builtin.Access-Permissions.permissions_ca","file://../certs/mainCaCert.pem"));
+	participant_property_policy.properties().emplace_back(eprosima::fastrtps::rtps::Property("dds.sec.access.builtin.Access-Permissions.governance","file://../certs/governance.smime"));
+	participant_property_policy.properties().emplace_back(eprosima::fastrtps::rtps::Property("dds.sec.access.builtin.Access-Permissions.permissions","file://../certs/permissions.smime"));
+	participant_property_policy.properties().emplace_back("dds.sec.crypto.plugin","builtin.AES-GCM-GMAC");
+
 	PParam.rtps.properties = participant_property_policy;
 #endif
 	eprosima::fastrtps::Participant* pParticipant = eprosima::fastrtps::Domain::createParticipant(PParam);
