@@ -1,0 +1,87 @@
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----9D8E6458A09B944722312781998FFAB0"
+
+This is an S/MIME signed message
+
+------9D8E6458A09B944722312781998FFAB0
+Content-Type: text/plain
+
+<?xml version="1.0" encoding="utf-8"?>
+<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.omg.org/spec/DDS-Security/20170801/omg_shared_ca_permissions.xsd">
+    <permissions>
+        <grant name="PublisherPermissions">
+            <subject_name>emailAddress=sc.kwak@unionplace.co.kr, CN=publisher, OU=unionplace, O=unionplace, ST=SEOUL, C=KR</subject_name>
+            <validity>
+                <not_before>2013-06-01T13:00:00</not_before>
+                <not_after>2038-06-01T13:00:00</not_after>
+            </validity>
+            <allow_rule>
+                <domains>
+                    <id_range>
+                        <min>0</min>
+                        <max>230</max>
+                    </id_range>
+                </domains>
+                <publish>
+                    <topics>
+                        <topic>HelloWorldTopic</topic>
+                    </topics>
+                </publish>
+            </allow_rule>
+            <default>DENY</default>
+        </grant>
+        <grant name="SubscriberPermissions">
+            <subject_name> emailAddress=sc.kwak@unionplace.co.kr, CN=subscriber, OU=unionplace, O=unionplace, ST=SEOUL, C=KR</subject_name>
+            <validity>
+                <not_before>2013-06-01T13:00:00</not_before>
+                <not_after>2038-06-01T13:00:00</not_after>
+            </validity>
+            <allow_rule>
+                <domains>
+                    <id_range>
+                        <min>0</min>
+                        <max>230</max>
+                    </id_range>
+                </domains>
+                <subscribe>
+                    <topics>
+                        <topic>HelloWorldTopic</topic>
+                    </topics>
+                </subscribe>
+            </allow_rule>
+            <default>DENY</default>
+        </grant>
+    </permissions>
+</dds>
+
+------9D8E6458A09B944722312781998FFAB0
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+MIIEOAYJKoZIhvcNAQcCoIIEKTCCBCUCAQExDzANBglghkgBZQMEAgEFADALBgkq
+hkiG9w0BBwGgggINMIICCTCCAbACCQCFXxW1YCSzqjAKBggqhkjOPQQDAjCBjDEL
+MAkGA1UEBhMCS1IxDjAMBgNVBAgMBVNFT1VMMQ0wCwYDVQQHDARHVVJPMRMwEQYD
+VQQKDAp1bmlvbnBsYWNlMSAwHgYDVQQDDBd1bmlvbnBsYWNlIE1haW4gVGVzdCBD
+QTEnMCUGCSqGSIb3DQEJARYYc2Mua3dha0B1bmlvbnBsYWNlLmNvLmtyMB4XDTE5
+MTAxNTA3MjIxM1oXDTI5MTAxMjA3MjIxM1owgYwxCzAJBgNVBAYTAktSMQ4wDAYD
+VQQIDAVTRU9VTDENMAsGA1UEBwwER1VSTzETMBEGA1UECgwKdW5pb25wbGFjZTEg
+MB4GA1UEAwwXdW5pb25wbGFjZSBNYWluIFRlc3QgQ0ExJzAlBgkqhkiG9w0BCQEW
+GHNjLmt3YWtAdW5pb25wbGFjZS5jby5rcjBZMBMGByqGSM49AgEGCCqGSM49AwEH
+A0IABJJZVYMNZYAxPuR6L/MzHyl3bIX930GrtmzzsY5NcCG2EygRkOqPKusajYch
+vIbtGFIgUNIucEQM/9ybxb4G8GcwCgYIKoZIzj0EAwIDRwAwRAIgLlMufWdCmJmX
+aZXqYP6yfdv6iOk5ahmgKI7eBMl2aLsCIEZLO6be/3f3Tyxh/mGV1D/zZ+OTIt1G
++t/zj5KOTV2rMYIB7zCCAesCAQEwgZowgYwxCzAJBgNVBAYTAktSMQ4wDAYDVQQI
+DAVTRU9VTDENMAsGA1UEBwwER1VSTzETMBEGA1UECgwKdW5pb25wbGFjZTEgMB4G
+A1UEAwwXdW5pb25wbGFjZSBNYWluIFRlc3QgQ0ExJzAlBgkqhkiG9w0BCQEWGHNj
+Lmt3YWtAdW5pb25wbGFjZS5jby5rcgIJAIVfFbVgJLOqMA0GCWCGSAFlAwQCAQUA
+oIHkMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE5
+MTAxNTExMjY1N1owLwYJKoZIhvcNAQkEMSIEII6mokG5IekV+XrA4adrjCEXa+4M
+aoIfOPOGYn8Fy4mzMHkGCSqGSIb3DQEJDzFsMGowCwYJYIZIAWUDBAEqMAsGCWCG
+SAFlAwQBFjALBglghkgBZQMEAQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCA
+MA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIHMA0GCCqGSIb3DQMCAgEoMAoGCCqGSM49
+BAMCBEcwRQIhAJGXE397lO6ZwuER8pMxBrQ2uDjRn59r+ykmEkg2CaxhAiAbJmHn
+6CKMaD6W/ivN7nfbOGB9NipGXNyOi0GWHCtfxQ==
+
+------9D8E6458A09B944722312781998FFAB0--
+
