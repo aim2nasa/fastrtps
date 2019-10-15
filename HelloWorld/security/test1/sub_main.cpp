@@ -8,6 +8,10 @@
 #include <fastrtps/subscriber/Subscriber.h>
 #include "gen/HelloWorldPubSubTypes.h"
 
+#ifdef SECURITY
+#include <fastrtps/rtps/attributes/PropertyPolicy.h>
+#endif
+
 using namespace std;
 
 class listener:public eprosima::fastrtps::SubscriberListener{
@@ -53,6 +57,15 @@ int main(int argc, char** argv)
 	(void)argv;
 
 	eprosima::fastrtps::ParticipantAttributes PParam;
+#ifdef SECURITY
+	std::cout<<"Security ON"<<std::endl;
+	eprosima::fastrtps::rtps::PropertyPolicy participant_property_policy;
+	participant_property_policy.properties().emplace_back("dds.sec.auth.plugin","builtin.PKI-DH");
+	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.identity_ca","file://../certs/mainCaCert.pem");
+	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.identity_certificate","file://../certs/subCert.pem");
+	participant_property_policy.properties().emplace_back("dds.sec.auth.builtin.PKI-DH.private_key","file://../certs/subKey.pem");
+	PParam.rtps.properties = participant_property_policy;
+#endif
 	eprosima::fastrtps::Participant* pParticipant = eprosima::fastrtps::Domain::createParticipant(PParam);
 	assert(pParticipant!=NULL);
 
