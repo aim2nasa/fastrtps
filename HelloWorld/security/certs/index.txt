@@ -1,1 +1,2 @@
 V	291012083557Z		CACA48F466E132BD	unknown	/C=KR/ST=SEOUL/O=unionplace/CN=publisher/emailAddress=sc.kwak@unionplace.co.kr
+V	291012090833Z		CACA48F466E132BE	unknown	/C=KR/ST=SEOUL/O=unionplace/CN=subscriber/emailAddress=sc.kwak@unionplace.co.kr

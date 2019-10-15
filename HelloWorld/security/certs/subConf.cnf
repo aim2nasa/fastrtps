@@ -1,0 +1,13 @@
+# File: subConf.cnf
+
+prompt = no
+string_mask = utf8only
+distinguished_name = req_distinguished_name
+
+[ req_distinguished_name ]
+countryName = KR 
+stateOrProvinceName = SEOUL 
+localityName = GURO
+organizationName = unionplace
+emailAddress = sc.kwak@unionplace.co.kr 
+commonName = subscriber
