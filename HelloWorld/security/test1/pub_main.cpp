@@ -35,6 +35,7 @@ int main(int argc, char** argv)
 
 	eprosima::fastrtps::PublisherAttributes WParam;
 	WParam.topic.topicDataType = "HelloWorld";
+	WParam.topic.topicName = "HelloWorldTopic";
 
 	eprosima::fastrtps::Publisher* pPublisher 
 		= eprosima::fastrtps::Domain::createPublisher(pParticipant,WParam);

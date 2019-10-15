@@ -74,6 +74,7 @@ int main(int argc, char** argv)
 
 	eprosima::fastrtps::SubscriberAttributes RParam;
 	RParam.topic.topicDataType = "HelloWorld";
+	RParam.topic.topicName = "HelloWorldTopic";
 
 	listener ls;
 	eprosima::fastrtps::Subscriber* pSubscriber
