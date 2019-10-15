@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -O2 -Wall -Wextra -std=c++11
+CXXFLAGS = -g -O2 -Wall -Wextra -std=c++11 -DSECURITY
 IDL = ../../HelloWorld.idl
 
 TARGET_PUB = pub
