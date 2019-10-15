@@ -33,3 +33,9 @@ HelloWorld/comExp/style1/gen/HelloWorldPubSubTypes.cxx
 HelloWorld/comExp/style1/gen/HelloWorldPubSubTypes.h
 HelloWorld/comExp/style1/pub
 HelloWorld/comExp/style1/sub
+HelloWorld/security/test1/gen/HelloWorld.cxx
+HelloWorld/security/test1/gen/HelloWorld.h
+HelloWorld/security/test1/gen/HelloWorldPubSubTypes.cxx
+HelloWorld/security/test1/gen/HelloWorldPubSubTypes.h
+HelloWorld/security/test1/pub
+HelloWorld/security/test1/sub
