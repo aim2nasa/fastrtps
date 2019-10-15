@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -g -O2 -Wall -Wextra -std=c++11
-IDL = ../HelloWorld.idl
+IDL = ../../HelloWorld.idl
 
 TARGET_PUB = pub
 SRCS_PUB = pub_main.cpp
