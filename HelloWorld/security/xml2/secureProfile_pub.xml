@@ -50,6 +50,12 @@
 		            <name>dds.sec.crypto.plugin</name>
 		            <value>builtin.AES-GCM-GMAC</value>
 		        </property>
+
+                <!-- Encrypt all RTPS submessages -->
+                <property>
+                    <name>rtps.participant.rtps_protection_kind</name>
+                    <value>ENCRYPT</value>
+                </property>
 		    </properties>
 		</propertiesPolicy>
 	    </rtps>
