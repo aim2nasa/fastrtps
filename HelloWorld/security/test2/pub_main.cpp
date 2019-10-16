@@ -17,12 +17,13 @@ int main(int argc, char** argv)
 	(void)argc;
 	(void)argv;
 
+	eprosima::fastrtps::Participant* pParticipant = NULL;
 #ifdef SECURITY
 	std::cout<<"Security ON"<<std::endl;
 	eprosima::fastrtps::xmlparser::XMLProfileManager::loadXMLFile("secureProfile_pub.xml");
 	std::string participant_profile_name = "secure_participant_conf_for_publisher";
+	pParticipant = eprosima::fastrtps::Domain::createParticipant(participant_profile_name);
 #endif
-	eprosima::fastrtps::Participant* pParticipant = eprosima::fastrtps::Domain::createParticipant(participant_profile_name);
 	assert(pParticipant!=NULL);
 
 	HelloWorldPubSubType type;
