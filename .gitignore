@@ -39,3 +39,9 @@ HelloWorld/security/test1/gen/HelloWorldPubSubTypes.cxx
 HelloWorld/security/test1/gen/HelloWorldPubSubTypes.h
 HelloWorld/security/test1/pub
 HelloWorld/security/test1/sub
+HelloWorld/security/test2/gen/HelloWorld.cxx
+HelloWorld/security/test2/gen/HelloWorld.h
+HelloWorld/security/test2/gen/HelloWorldPubSubTypes.cxx
+HelloWorld/security/test2/gen/HelloWorldPubSubTypes.h
+HelloWorld/security/test2/pub
+HelloWorld/security/test2/sub
