@@ -6,6 +6,7 @@
 #include <fastrtps/publisher/Publisher.h>
 #include "gen/HelloWorldPubSubTypes.h"
 #include <fastrtps/publisher/PublisherListener.h>
+#include <fastrtps/qos/QosPolicies.h>
 
 using namespace std;
 
@@ -42,6 +43,7 @@ int main(int argc, char** argv)
 
 	eprosima::fastrtps::PublisherAttributes WParam;
 	WParam.topic.topicDataType = "HelloWorld";
+	WParam.qos.m_reliability.kind = eprosima::fastrtps::RELIABLE_RELIABILITY_QOS;
 
 	pubListener pl;
 	eprosima::fastrtps::Publisher* pPublisher 

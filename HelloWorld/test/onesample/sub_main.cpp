@@ -7,6 +7,7 @@
 #include <fastrtps/subscriber/SampleInfo.h>
 #include <fastrtps/subscriber/Subscriber.h>
 #include "gen/HelloWorldPubSubTypes.h"
+#include <fastrtps/qos/QosPolicies.h>
 
 using namespace std;
 
@@ -61,6 +62,7 @@ int main(int argc, char** argv)
 
 	eprosima::fastrtps::SubscriberAttributes RParam;
 	RParam.topic.topicDataType = "HelloWorld";
+	RParam.qos.m_reliability.kind = eprosima::fastrtps::RELIABLE_RELIABILITY_QOS;
 
 	listener ls;
 	eprosima::fastrtps::Subscriber* pSubscriber
