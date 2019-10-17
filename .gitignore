@@ -45,3 +45,6 @@ HelloWorld/security/xml*/gen/HelloWorldPubSubTypes.cxx
 HelloWorld/security/xml*/gen/HelloWorldPubSubTypes.h
 HelloWorld/security/xml*/pub
 HelloWorld/security/xml*/sub
+HelloWorld/test/onesample/gen/H*
+HelloWorld/test/onesample/pub
+HelloWorld/test/onesample/sub
