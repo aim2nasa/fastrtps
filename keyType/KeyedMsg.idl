@@ -1,0 +1,5 @@
+struct KeyedMsg
+{
+	@Key unsigned long id;
+	string msg;
+};
