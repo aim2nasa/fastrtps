@@ -12,7 +12,11 @@ OBJS_SUB = ${SRCS_SUB:.cpp=.o}
 
 LIBS = -lfastrtps -L$(shell pwd) -lKeyedMsg -lpthread
 
-all : main-build
+all : pre-build main-build
+
+pre-build:
+	@echo PRE
+	@cd gen;make
 
 main-build: $(TARGET_PUB) $(TARGET_SUB)
 
