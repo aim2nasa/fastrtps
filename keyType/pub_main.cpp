@@ -1,4 +1,5 @@
 #include <iostream>
+#include "KeyedMsgPublisher.h"
 
 using namespace std;
 
