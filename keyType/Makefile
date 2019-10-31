@@ -34,4 +34,5 @@ $(TARGET_SUB) : $(OBJS_SUB)
 
 clean:
 	@echo $@...
+	@cd gen;make clean
 	rm -rf *.o $(TARGET_PUB) $(TARGET_SUB) *.so*
