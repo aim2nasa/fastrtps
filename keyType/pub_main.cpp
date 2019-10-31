@@ -13,6 +13,7 @@ int main(int argc, char** argv)
 		std::cout<<"init failed"<<std::endl;
 		return -1;
 	}
+	pub.run(1000);
 	std::cout<<"publisher end"<<std::endl;
 	return 0;
 }
