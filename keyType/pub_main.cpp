@@ -9,5 +9,10 @@ int main(int argc, char** argv)
 	(void)argv;
 
 	KeyedMsgPublisher pub;
+	if(!pub.init()) {
+		std::cout<<"init failed"<<std::endl;
+		return -1;
+	}
+	std::cout<<"publisher end"<<std::endl;
 	return 0;
 }
