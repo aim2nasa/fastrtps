@@ -61,8 +61,9 @@ void KeyedMsgPublisher::runThread(uint32_t sleep)
 	while(1){
 		std::condition_variable cv_;
     	m_keyedMsg.id(m_keyedMsg.id()+1);
-        mp_publisher->write((void*)&m_keyedMsg);
-		std::cout << "id:"<<m_keyedMsg.id()<< ",msg:"<< m_keyedMsg.msg()<<std::endl;
+        if(mp_publisher->write((void*)&m_keyedMsg)){
+			std::cout << "id:"<<m_keyedMsg.id()<< ",msg:"<< m_keyedMsg.msg()<<std::endl;
+		}
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(sleep));
 	}
